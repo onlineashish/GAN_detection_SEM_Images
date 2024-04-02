@@ -13,7 +13,7 @@ class BaseOptions():
 
     def initialize(self, parser):
         parser.add_argument('--mode', default='binary')
-        parser.add_argument('--arch', type=str, default='res50', help='architecture for binary classification')
+        parser.add_argument('--arch', type=str, default='res18', help='architecture for binary classification')
 
         # data augmentation
         parser.add_argument('--rz_interp', default='bilinear')
@@ -28,7 +28,7 @@ class BaseOptions():
         parser.add_argument('--class_bal', action='store_true')
         parser.add_argument('--batch_size', type=int, default=64, help='input batch size')
         parser.add_argument('--loadSize', type=int, default=256, help='scale images to this size')
-        parser.add_argument('--cropSize', type=int, default=224, help='then crop to this size')
+        parser.add_argument('--cropSize', type=int, default=256, help='then crop to this size')
         parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
         parser.add_argument('--name', type=str, default='experiment_name', help='name of the experiment. It decides where to store samples and models')
         parser.add_argument('--epoch', type=str, default='latest', help='which epoch to load? set to latest to use latest cached model')

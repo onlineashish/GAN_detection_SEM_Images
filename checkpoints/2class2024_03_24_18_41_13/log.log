@@ -1,0 +1,3 @@
+train.py  --name  2class  --dataroot  dataset  --classes  FastGan,StyleGAN_ADA  --batch_size  64  --delr_freq  10  --lr  0.0002  --niter  50
+cwd: /home/ashish/NPR-DeepfakeDetectionResnet18
+(Val @ epoch 0) acc: 0.5; ap: 0.6259209028912591

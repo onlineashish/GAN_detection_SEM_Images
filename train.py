@@ -28,8 +28,8 @@ def seed_torch(seed=1029):
 
 
 # test config
-vals = ['progan', 'stylegan', 'stylegan2', 'biggan', 'cyclegan', 'stargan', 'gaugan', 'deepfake']
-multiclass = [1, 1, 1, 0, 1, 0, 0, 0]
+vals = ['FastGan','StyleGAN_ADA']
+multiclass = [0,0]
 
 
 def get_val_opt():

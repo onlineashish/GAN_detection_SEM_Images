@@ -107,16 +107,16 @@ class ResNet(nn.Module):
         self.unfoldIndex = 0
         assert self.unfoldSize > 1
         assert -1 < self.unfoldIndex and self.unfoldIndex < self.unfoldSize*self.unfoldSize
-        self.inplanes = 64
-        self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=2, padding=1, bias=False)
-        self.bn1 = nn.BatchNorm2d(64)
+        self.inplanes = 8
+        self.conv1 = nn.Conv2d(3, 8, kernel_size=3, stride=2, padding=1, bias=False)
+        self.bn1 = nn.BatchNorm2d(8)
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
-        self.layer1 = self._make_layer(block, 64 , layers[0])
-        self.layer2 = self._make_layer(block, 128, layers[1], stride=2)
+        self.layer1 = self._make_layer(block, 8 , layers[0])
+        self.layer2 = self._make_layer(block, 16, layers[1], stride=2) ##### changed from 128 to 512
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
         # self.fc1 = nn.Linear(512 * block.expansion, 1)
-        self.fc1 = nn.Linear(512, num_classes)
+        self.fc1 = nn.Linear(16, num_classes)
 
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
@@ -153,6 +153,7 @@ class ResNet(nn.Module):
     def interpolate(self, img, factor):
         return F.interpolate(F.interpolate(img, scale_factor=factor, mode='nearest', recompute_scale_factor=True), scale_factor=1/factor, mode='nearest', recompute_scale_factor=True)
     def forward(self, x):
+        # breakpoint()
         # n,c,w,h = x.shape
         # if -1*w%2 != 0: x = x[:,:,:w%2*-1,:      ]
         # if -1*h%2 != 0: x = x[:,:,:      ,:h%2*-1]
@@ -178,6 +179,17 @@ class ResNet(nn.Module):
         x = self.fc1(x)
 
         return x
+    
+
+def resnet10(pretrained=False, **kwargs):
+    """Constructs a ResNet-18 model.
+    Args:
+        pretrained (bool): If True, returns a model pre-trained on ImageNet
+    """
+    model = ResNet(BasicBlock, [1, 1, 1, 1], **kwargs)
+    if pretrained:
+        model.load_state_dict(model_zoo.load_url(model_urls['resnet18']))
+    return model
 
 
 def resnet18(pretrained=False, **kwargs):

@@ -1,0 +1,2 @@
+train.py  --dataroot  ./dataset/  --classes  eval_100000  --batch_size  64  --delr_freq  10  --lr  0.0002  --niter  10  --loss_freq  10  --name  ab
+cwd: /media/aalok/Zone_C/SahAshish/Detection/NPR-DeepfakeDetection(Resnet9)

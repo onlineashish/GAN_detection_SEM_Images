@@ -1,0 +1,36 @@
+train.py  --dataroot  ./dataset/  --classes  eval_100000  --batch_size  64  --delr_freq  10  --lr  0.0002  --niter  10  --loss_freq  10  --name  aalok
+cwd: /media/aalok/Zone_C/SahAshish/Detection/NPR-DeepfakeDetection(Resnet9)
+2024_03_11_16_29_52 Train loss: 0.6031472682952881 at step: 10 lr 0.0002
+(Val @ epoch 0) acc: 0.56; ap: 0.6438251403382409
+2024_03_11_16_29_57 Train loss: 0.4901156425476074 at step: 20 lr 0.0002
+2024_03_11_16_30_00 Train loss: 0.3073885440826416 at step: 30 lr 0.0002
+(Val @ epoch 1) acc: 0.5066666666666667; ap: 0.5488570091804741
+2024_03_11_16_30_05 Train loss: 0.1348962038755417 at step: 40 lr 0.0002
+2024_03_11_16_30_09 Train loss: 0.039825208485126495 at step: 50 lr 0.0002
+(Val @ epoch 2) acc: 0.62; ap: 0.9430349282966728
+2024_03_11_16_30_13 Train loss: 0.0361512191593647 at step: 60 lr 0.0002
+(Val @ epoch 3) acc: 0.98; ap: 0.9994871794871794
+2024_03_11_16_30_18 Train loss: 0.021408049389719963 at step: 70 lr 0.0002
+2024_03_11_16_30_21 Train loss: 0.023711157962679863 at step: 80 lr 0.0002
+(Val @ epoch 4) acc: 0.9666666666666667; ap: 0.9988617886178861
+2024_03_11_16_30_26 Train loss: 0.05111825466156006 at step: 90 lr 0.0002
+2024_03_11_16_30_30 Train loss: 0.005753642879426479 at step: 100 lr 0.0002
+(Val @ epoch 5) acc: 0.9733333333333334; ap: 0.9999999999999998
+2024_03_11_16_30_34 Train loss: 0.004852213431149721 at step: 110 lr 0.0002
+(Val @ epoch 6) acc: 0.96; ap: 1.0
+2024_03_11_16_30_39 Train loss: 0.008487368933856487 at step: 120 lr 0.0002
+2024_03_11_16_30_42 Train loss: 0.011833162978291512 at step: 130 lr 0.0002
+(Val @ epoch 7) acc: 1.0; ap: 0.9999999999999998
+2024_03_11_16_30_47 Train loss: 0.003214640077203512 at step: 140 lr 0.0002
+2024_03_11_16_30_51 Train loss: 0.005407864227890968 at step: 150 lr 0.0002
+(Val @ epoch 8) acc: 0.9933333333333333; ap: 0.9999999999999999
+2024_03_11_16_30_55 Train loss: 0.013413709588348866 at step: 160 lr 0.0002
+2024_03_11_16_30_59 Train loss: 0.012695478275418282 at step: 170 lr 0.0002
+(Val @ epoch 9) acc: 0.94; ap: 0.9807440787944416
+*************************
+2024_03_11_16_31_00
+(0 eval_100000) acc: 96.7; ap: 99.4
+(1 Mean      ) acc: 96.7; ap: 99.4
+*************************
+2024_03_11_16_31_01
+Saving model ./checkpoints/aalok2024_03_11_16_29_48/model_epoch_last.pth

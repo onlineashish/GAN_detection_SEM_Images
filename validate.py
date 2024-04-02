@@ -1,7 +1,8 @@
 import torch
 import numpy as np
-from networks.resnet import resnet50
+from networks.resnet import *
 from sklearn.metrics import average_precision_score, precision_recall_curve, accuracy_score
+from networks.resnet import resnet10
 from options.test_options import TestOptions
 from data import create_dataloader
 
@@ -27,9 +28,10 @@ def validate(model, opt):
 if __name__ == '__main__':
     opt = TestOptions().parse(print_options=False)
 
-    model = resnet50(num_classes=1)
+    model = resnet10(num_classes=1)
     state_dict = torch.load(opt.model_path, map_location='cpu')
-    model.load_state_dict(state_dict['model'])
+    # model.load_state_dict(state_dict['model'])
+    model.load_state_dict(state_dict)
     model.cuda()
     model.eval()
 

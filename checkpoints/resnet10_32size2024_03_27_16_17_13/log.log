@@ -1,0 +1,17 @@
+train.py  --name  resnet10_32size  --dataroot  dataset  --classes  FastGan,StyleGAN_ADA  --batch_size  1024  --delr_freq  30  --lr  0.0002  --niter  500
+Model size: 19697.00000
+cwd: /home/ashish/NPR-DeepfakeDetectionResnet18
+(Val @ epoch 0) acc: 0.5; ap: 0.6117119183555094
+(Val @ epoch 1) acc: 0.5; ap: 0.5641935999907781
+(Val @ epoch 2) acc: 0.5; ap: 0.48638079052619676
+(Val @ epoch 3) acc: 0.5; ap: 0.4724983894767225
+(Val @ epoch 4) acc: 0.5; ap: 0.4711980552181501
+(Val @ epoch 5) acc: 0.5; ap: 0.47276232082330577
+(Val @ epoch 6) acc: 0.5; ap: 0.4734189978454739
+(Val @ epoch 7) acc: 0.5; ap: 0.4754155047859243
+(Val @ epoch 8) acc: 0.5; ap: 0.47518639192817197
+(Val @ epoch 9) acc: 0.5; ap: 0.47292150193852056
+(Val @ epoch 10) acc: 0.5; ap: 0.4705525599594973
+(Val @ epoch 11) acc: 0.5; ap: 0.46806770764238537
+(Val @ epoch 12) acc: 0.5; ap: 0.46531833906241676
+(Val @ epoch 13) acc: 0.5; ap: 0.46366707060392687
